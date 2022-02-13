@@ -1,0 +1,338 @@
+@import "bourbon";
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+
+body {
+  background-color: lightgray;
+}
+
+#top {
+  background-image: url("https://images.unsplash.com/photo-1511877150299-3622fc88aee3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+  padding: 100px;
+  background-size: cover;
+  color: #ba9109;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.headerTitle {
+  font-size: 130px;
+}
+
+button {
+  appearance: none;
+  background-color: #106d82;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 3px 6px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.page-title{
+  margin-left: 20px;
+}
+
+a {
+  appearance: none;
+  background-color: #106d82;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 3px 6px;
+  margin-left: 5px;
+  margin-top: 5px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+a:hover {
+  background-color: #4196a5;
+}
+
+a:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+a:focus {
+  box-shadow: rgba(46, 164, 79, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+#all-products-container {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#all-products-container-one {
+  max-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 50%;
+}
+
+.home-paragraph-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-paragraph {
+  font-size: 30px;
+  max-width: 80%;
+}
+
+.home-page-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.logout {
+  margin-left: 10px;
+  display: none;
+}
+
+.single-product-card {
+  background: rgb(243, 249, 246);
+  flex-basis: 200px;
+  flex-grow: 1;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartItem {
+  background: rgb(243, 249, 246);
+  flex-basis: 200px;
+  flex-grow: 1;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  height: 120px;
+}
+
+#cartItems-container {
+ display: flex
+}
+
+.single-product-card img,
+.single-product-view img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 10px;
+}
+
+.header-info > p {
+  margin: 5px;
+}
+
+button:hover {
+  background: #4196a5;
+}
+
+.login {
+  padding: 15px;
+  width: 400px;
+  min-height: 400px;
+  margin: 2% auto 0 auto;
+}
+
+input {
+  width: 80%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.single-product-view {
+  flex-basis: 500px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px 10px;
+  padding: 10px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.single-product-view > p {
+  margin: 10px 0px 0px 0px;
+}
+
+.remove-button{
+  margin-right: 5px;
+}
+
+.card {
+  font-family: arial;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 600px;
+  display: grid;
+  grid-template-areas:
+    "prod"
+    "total-text"
+    "order-btn";
+  padding: 30px;
+  margin-left: 10px;
+  box-shadow: 0 0 15px lightgrey;
+}
+
+.product {
+  grid-area: "prod";
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product .img-wrapper {
+  position: relative;
+}
+
+.product .img-wrapper .badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 3px lightgrey;
+  color: grey;
+}
+
+.product img {
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.product .product-name {
+  padding-left: 15px;  
+  flex-grow: 2;
+}
+
+.product .product-name p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.product .product-name span {
+  color: grey;
+}
+
+
+.total {
+  grid-area: "total-text";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid lightgrey;
+  margin-top: 20px
+}
+
+.total p.total-price {
+  font-weight: 600;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.total p.total-price span {
+  font-weight: 400;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 10px;
+  color: grey;
+}
+
+.place-order {
+  grid-area: "order-btn";
+  border-top: 1px solid lightgrey;
+}
+
+.place-order button {
+  width: 100%;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  margin: 30px 0 20px;
+}
+
