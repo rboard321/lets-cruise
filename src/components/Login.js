@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
-import { callApi } from "./utils";
-import { getCartByUser } from "../api";
+
 const APIURL = `https://outdoorstuff.herokuapp.com/api`;
-const REACT_APP_API_URL = process.env;
 
 const Login = ({
   user,
@@ -22,7 +20,7 @@ const Login = ({
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [isMatched, setIsMatched] = useState(false);
-  const [message, setMessage] = useState("");
+
   const params = useParams();
 
   let navigate = useNavigate();
@@ -111,7 +109,6 @@ const Login = ({
                   </>
                   <Link to="/api/users/register">Register</Link>
                 </>
-                <div>{message}</div>
               </>
             ) : null}
           </form>

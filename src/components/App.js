@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
-import { getAllCheckoutByUserId, getCartByUser, getAllProducts } from "../api";
+import { getAllProducts } from "../api";
 import { Products, Product, Login, MyCart, AdminEdit, Home } from "./";
 
 const App = () => {
@@ -13,10 +12,9 @@ const App = () => {
   const [myProducts, setMyProducts] = useState();
   const [cartItems, setCartItems] = useState([]);
   const [itemId, setItemId] = useState();
-  const [checkout, setCheckout] = useState([]);
+
   const [isAdmin, setIsAdmin] = useState(false);
-  const [userData, setUserData] = useState({});
-  const [cart, setCart] = useState([]);
+
   const [totalCartCost, setTotalCartCost] = useState(0);
 
   useEffect(() => {
@@ -114,10 +112,7 @@ const App = () => {
               products={products}
               myProducts={myProducts}
               setMyProducts={setMyProducts}
-              setCheckout={setCheckout}
               setCartItems={setCartItems}
-              userData={userData}
-              cart={cart}
             />
           }
         />

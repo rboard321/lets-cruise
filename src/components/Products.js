@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link, Routes, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 import {
   createOrder,
   getCartByUser,
-  getProductById,
-  updateQuantity,
-  getAllProducts,
+  getAllProducts
+  
 } from "../api";
 
-const Products = ({ products, setProducts, user, token, setMyProducts }) => {
-  const [quantity, setQuantity] = useState(0);
-  const [itemOrder, setItemOrder] = useState(0);
-  const [updatingItem, setUpdatingItem] = useState(false);
+const Products = ({ setProducts, products, user, token, setMyProducts }) => {
+
+  useEffect(() => {
+    async function getProducts() {
+      const response = await getAllProducts();
+      setProducts(response);
+    }
+    getProducts();
+  }, []);
+  console.log('from products',products)
 
   const navigate = useNavigate();
 
@@ -30,7 +35,6 @@ const Products = ({ products, setProducts, user, token, setMyProducts }) => {
 
       const cart = await getCartByUser(user.id, token);
 
-      console.log(">>>>???/", cart);
       const notify = () =>
         toast.success("🚲 Your item has been added to your cart!");
       notify();
@@ -57,7 +61,7 @@ const Products = ({ products, setProducts, user, token, setMyProducts }) => {
               {product.price}
             </h3>
             <p>{product.description}</p>
-            <img src={product.imgurl}></img>
+            <img src={product.imgurl} alt="bike"></img>
             <button
               value={product.id}
               onClick={(event) => navigate(`${event.target.value}`)}

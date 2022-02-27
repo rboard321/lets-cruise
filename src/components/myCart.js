@@ -24,7 +24,7 @@ const MyCart = ({ userId, token, setMyProducts, myProducts, user, cart }) => {
   const [creditCardExp, setCreditCardExp] = useState("");
   const [creditValidationNumber, setCreditValidationNumber] = useState("");
   const [quantity, setQuantity] = useState(0);
-  const [success, setSuccess] = useState(false);
+
   const [total, setTotal] = useState(0);
 
   const getTotal = async () => {
@@ -119,7 +119,7 @@ const MyCart = ({ userId, token, setMyProducts, myProducts, user, cart }) => {
     const usersCart = await getCartByUser(user.id, token);
     setMyProducts(usersCart);
     deleteCart();
-    setSuccess(true);
+
     setFirstName("");
     setLastName("");
     setStreet("");
@@ -194,47 +194,6 @@ const MyCart = ({ userId, token, setMyProducts, myProducts, user, cart }) => {
                 </div>
               </div>
             </>
-
-            // <div className="card" key={item.id}>
-            //   <div className="product">
-
-            //     {/*<img className="product-img" src={item.imgurl}></img>*/}
-            //     <div className="product-name">
-            //     {item.title}
-            //     </div>
-            //     <div className="price">
-            //     {" $"}
-            //     {item.price * item.orderQuantity}
-            //     </div>
-            //     <button
-            //       value={item.orderId}
-            //       onClick={(event) => handleUpdate(event.target.value)}
-            //     >
-            //       Update
-            //     </button>
-            //     <select onChange={(event) => setQuantity(event.target.value)}>
-            //       <option value={1}>1</option>
-            //       <option value={2}>2</option>
-            //       <option value={3}>3</option>
-            //       <option value={4}>4</option>
-            //       <option value={5}>5</option>
-            //       <option value={6}>6</option>
-            //       <option value={7}>7</option>
-            //       <option value={8}>8</option>
-            //       <option value={9}>9</option>
-            //       <option value={10}>10</option>
-            //     </select>
-            //     <button
-            //       value={item.orderId}
-            //       onClick={(event) => {
-            //         event.preventDefault();
-            //         removeItem(event.target.value);
-            //       }}
-            //     >
-            //       Remove selected item
-            //     </button>
-            //   </div>
-            // </div>
           ))
         ) : (
           <div>Cart is Empty</div>

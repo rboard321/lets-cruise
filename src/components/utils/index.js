@@ -1,4 +1,4 @@
-import React from "react";
+
 const { REACT_APP_API_URL = `https://outdoorstuff.herokuapp.com/api` } =
   process.env;
 
